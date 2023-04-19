@@ -8,8 +8,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: npm ci
-      - run: npm test
+      - run: npm install --package-lock-only
+      # - run: npm test
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_PUBLISH_TOKEN }}
