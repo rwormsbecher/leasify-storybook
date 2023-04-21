@@ -11,6 +11,7 @@ export enum ButtonSizesEnum {
   Small = 'Small',
   Medium = 'Medium',
   Large = 'Large',
+  FullWidth = 'FullWidth',
 }
 
 export enum ButtonHorizontalPositionEnum {
@@ -34,6 +35,10 @@ const LeasifyButton = styled.button<IButtonProps>`
     border: none;
     font-size: 1rem;
     width: 100%;
+
+    &:hover {
+      cursor: pointer;
+    }
 
     @media ${screenSize.tablet} {
         width: initial;
@@ -71,6 +76,16 @@ const LeasifyButton = styled.button<IButtonProps>`
       size === ButtonSizesEnum.Large &&
       css`
         padding: 0.75rem 1.5rem;
+      `}
+      
+    ${({ size }: any) =>
+      size === ButtonSizesEnum.FullWidth &&
+      css`
+        padding: 0.75rem 1.5rem;
+
+        @media (min-width: 600px) {
+          width: 100%;
+        }
       `}
 
     /* Button horizontal alignment styles */ 
