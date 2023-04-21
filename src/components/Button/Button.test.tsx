@@ -11,7 +11,7 @@ import '@testing-library/jest-dom';
 import { ThemeProvider } from 'styled-components';
 import { generalTheme } from '../../themes/generalTheme';
 
-describe('Thing', () => {
+describe('Leasify button', () => {
   test('renders a button with no parameters as green', () => {
     // arrange
     const { getByText } = render(
