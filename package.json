@@ -14,6 +14,7 @@
         "start": "tsdx watch",
         "build": "tsdx build",
         "test": "tsdx test --passWithNoTests",
+        "test:coverage": "tsdx test  --coverage",
         "lint": "tsdx lint",
         "prepare": "tsdx build",
         "size": "size-limit",
@@ -50,6 +51,22 @@
             "limit": "10 KB"
         }
     ],
+    "jest": {
+        "collectCoverage": true,
+        "coverageReporters": [
+            "json-summary",
+            "text",
+            "lcov"
+        ],
+        "coverageThreshold": {
+            "global": {
+                "branches": 80,
+                "functions": 80,
+                "lines": 80,
+                "statements": 80
+            }
+        }
+    },
     "devDependencies": {
         "@babel/core": "^7.21.4",
         "@babel/preset-env": "^7.21.4",
