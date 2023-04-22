@@ -100,6 +100,8 @@
     "dependencies": {
         "@storybook/addon-a11y": "^7.0.6",
         "@testing-library/react": "^14.0.0",
+        "react-icons": "^4.8.0",
+        "react-router-dom": "^6.10.0",
         "storybook-addon-styled-component-theme": "^2.0.0",
         "styled-components": "^5.3.9"
     }
