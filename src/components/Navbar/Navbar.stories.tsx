@@ -39,6 +39,7 @@ export const NavbarWithLinks: Story = {
         links: [
             { text: 'Overzicht', icon: <RiFoldersLine />, to: '/' },
             { text: 'Hulp nodig?', icon: <MdOutlineLiveHelp />, to: '/help' },
+            { text: 'Overzicht', icon: <RiFoldersLine />, to: '/' },
         ],
     },
 };
