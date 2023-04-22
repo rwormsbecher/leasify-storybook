@@ -80,8 +80,8 @@ const LinkItem = styled.li`
     }
 `;
 
-export const NavbarComponent: React.FC<INavbarComponentProps> = ({
-    links = [],
+export const LeasifyNavbar: React.FC<INavbarComponentProps> = ({
+    links,
     ...props
 }) => {
     return (
@@ -89,10 +89,13 @@ export const NavbarComponent: React.FC<INavbarComponentProps> = ({
             <Navbar {...props}>
                 <LinkContainer>
                     {links.map((link: ILink) => (
-                        <NavLink to={link?.to} key={link?.text}>
-                            <LinkItem key={link?.text}>
-                                <span className="icon">{link?.icon}</span>
-                                <span>{link?.text}</span>
+                        <NavLink to={link.to} key={link.text}>
+                            <LinkItem
+                                key={link.text}
+                                data-testid={`icon-${link.to}`}
+                            >
+                                <span className="icon">{link.icon}</span>
+                                <span>{link.text}</span>
                             </LinkItem>
                         </NavLink>
                     ))}
