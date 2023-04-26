@@ -31,7 +31,7 @@ const LinkContainer = styled.div`
 
     @media ${screenSize.desktop} {
         width: calc(100% - 284px);
-        margin: 0 142px;
+        margin: 0 174px;
         justify-content: flex-start;
     }
     height: 100%;
