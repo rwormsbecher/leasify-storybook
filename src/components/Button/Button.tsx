@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ButtonHTMLAttributes } from 'react';
 import styled, { css } from 'styled-components';
 import { screenSize } from '../../themes/global';
 
@@ -19,7 +19,7 @@ export enum LeasifyButtonHorizontalPositionEnum {
     Center = 'Center',
 }
 
-interface IButtonProps {
+interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     buttonType?: LeasifyButtonTypesEnum;
     size?: LeasifyButtonSizesEnum;
     alignX?: LeasifyButtonHorizontalPositionEnum;
@@ -37,7 +37,7 @@ const LeasifyButtonUI = styled.button<IButtonProps>`
     width: 100%;
 
     &:hover {
-      cursor: pointer;
+        cursor: pointer;
     }
 
     @media ${screenSize.tablet} {
@@ -77,7 +77,7 @@ const LeasifyButtonUI = styled.button<IButtonProps>`
         css`
             padding: 0.75rem 1.5rem;
         `}
-      
+    
     ${({ size }: any) =>
         size === LeasifyButtonSizesEnum.FullWidth &&
         css`
