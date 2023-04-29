@@ -164,7 +164,13 @@ export const LeasifyHeader: React.FC<IHeaderProps> = ({
                 <div className="content-area">
                     <div className="slash"></div>
 
-                    <BreadCrumbContainer>
+                    <BreadCrumbContainer
+                        style={
+                            breadCrumbLinks.length === 0
+                                ? { marginTop: '12px' }
+                                : {}
+                        }
+                    >
                         <ul>{linksUi}</ul>
                     </BreadCrumbContainer>
                     <TitleContainer>

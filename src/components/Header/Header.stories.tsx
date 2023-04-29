@@ -97,3 +97,10 @@ export const headerWithoutButton: Story = {
         title: "Personenauto's",
     },
 };
+
+export const headerWithOnlyTitle: Story = {
+    args: {
+        breadCrumbLinks: [],
+        title: "Personenauto's",
+    },
+};
