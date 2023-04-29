@@ -16,7 +16,6 @@ export interface IHeaderLink {
 
 const Header = styled.div`
     width: 100%;
-    position: relative;
 `;
 
 const HeaderOverLay = styled.div`
