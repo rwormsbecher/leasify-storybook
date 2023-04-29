@@ -7,7 +7,6 @@ import {
     LeasifyButtonSizesEnum,
     LeasifyButtonTypesEnum,
 } from './Button';
-import '@testing-library/jest-dom';
 import { ThemeProvider } from 'styled-components';
 import { generalTheme } from '../../themes/generalTheme';
 
