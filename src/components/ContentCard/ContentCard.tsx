@@ -1,6 +1,5 @@
 import React, { HTMLAttributes } from 'react';
 import styled from 'styled-components';
-import '@testing-library/jest-dom';
 
 interface IContentCardProps extends HTMLAttributes<HTMLDivElement> {
     children: React.ReactNode;
