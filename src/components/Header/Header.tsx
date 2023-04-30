@@ -15,13 +15,7 @@ export interface IHeaderLink {
 }
 
 const Header = styled.div`
-    width: 100%;
-`;
-
-const HeaderOverLay = styled.div`
-    width: 100%;
     z-index: 10;
-    position: absolute;
 
     @media ${screenSize.desktop} {
         height: 160px;
@@ -159,25 +153,22 @@ export const LeasifyHeader: React.FC<IHeaderProps> = ({
 
     return (
         <Header {...props}>
-            <HeaderOverLay>
-                <div className="content-area">
-                    <div className="slash"></div>
-
-                    <BreadCrumbContainer
-                        style={
-                            breadCrumbLinks.length === 0
-                                ? { marginTop: '12px' }
-                                : {}
-                        }
-                    >
-                        <ul>{linksUi}</ul>
-                    </BreadCrumbContainer>
-                    <TitleContainer>
-                        <h1>{title}</h1>
-                        {button}
-                    </TitleContainer>
-                </div>
-            </HeaderOverLay>
+            <div className="content-area">
+                <div className="slash"></div>
+                <BreadCrumbContainer
+                    style={
+                        breadCrumbLinks.length === 0
+                            ? { marginTop: '12px' }
+                            : {}
+                    }
+                >
+                    <ul>{linksUi}</ul>
+                </BreadCrumbContainer>
+                <TitleContainer>
+                    <h1>{title}</h1>
+                    {button}
+                </TitleContainer>
+            </div>
         </Header>
     );
 };
