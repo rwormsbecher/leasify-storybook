@@ -1,9 +1,9 @@
-import React, { ButtonHTMLAttributes, useMemo } from 'react';
+import React, { HTMLAttributes, useMemo } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { screenSize } from '../../themes/global';
 
-export interface IHeaderProps extends ButtonHTMLAttributes<HTMLDivElement> {
+export interface IHeaderProps extends HTMLAttributes<HTMLDivElement> {
     title: string;
     breadCrumbLinks: IHeaderLink[];
     button?: JSX.Element;
