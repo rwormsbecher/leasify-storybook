@@ -64,7 +64,7 @@ const BreadCrumbContainer = styled.div`
     width: 100%;
     color: white;
     font-size: 16px;
-    margin: 38px 16px 16px 16px;
+    margin: 38px 16px 16px 8px;
     z-index: 12;
 
     ul {
