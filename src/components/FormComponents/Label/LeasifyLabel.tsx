@@ -8,7 +8,7 @@ export interface ILabelProps extends HTMLAttributes<HTMLLabelElement> {
 
 export const Label = styled.label`
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     color: ${themeProps => themeProps.theme.primaryMuted400};
 `;
 
