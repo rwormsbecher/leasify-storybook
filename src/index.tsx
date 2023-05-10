@@ -19,6 +19,15 @@ export {
 // Leasify Navbar
 export { ILink, LeasifyNavbar } from './components/Navbar/Navbar';
 
+// Leasify Label
+export {
+    ILabelProps,
+    LeasifyLabel,
+} from './components/FormComponents/Label/LeasifyLabel';
+
+// Leasify Textbox
+export { LeasifyTextbox } from './components/FormComponents/LeasifyTextbox/Textbox';
+
 // Themes
 export { generalTheme } from './themes/generalTheme';
 export { IThemeModel } from './models/IThemeModel';

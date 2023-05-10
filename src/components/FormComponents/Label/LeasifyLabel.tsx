@@ -1,7 +1,7 @@
 import React, { HTMLAttributes } from 'react';
 import styled from 'styled-components';
 
-interface ILabelProps extends HTMLAttributes<HTMLLabelElement> {
+export interface ILabelProps extends HTMLAttributes<HTMLLabelElement> {
     title?: string;
     htmlFor?: string;
 }
