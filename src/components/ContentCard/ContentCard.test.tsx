@@ -4,7 +4,7 @@ import { LeasifyContentCard } from './ContentCard';
 import '@testing-library/jest-dom';
 
 describe('LeasifyContentCard component', () => {
-    it('renders children', () => {
+    test('renders children', () => {
         render(
             <LeasifyContentCard>
                 <span>Test Content</span>
@@ -13,7 +13,7 @@ describe('LeasifyContentCard component', () => {
         expect(screen.getByText('Test Content')).toBeInTheDocument();
     });
 
-    it('renders props', () => {
+    test('renders props', () => {
         render(
             <LeasifyContentCard style={{ background: 'hotpink' }}>
                 something

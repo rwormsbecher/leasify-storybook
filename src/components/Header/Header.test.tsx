@@ -15,7 +15,7 @@ const defaultProps: IHeaderProps = {
 };
 
 describe('HeaderComponent', () => {
-    it('should render the title and breadcrumb links correctly', () => {
+    test('should render the title and breadcrumb links correctly', () => {
         //arrange
         render(
             <ThemeProvider theme={generalTheme}>
@@ -44,7 +44,7 @@ describe('HeaderComponent', () => {
         }
     });
 
-    it('should render the breadcrumb when the links are empty', () => {
+    test('should render the breadcrumb when the links are empty', () => {
         //arrange
         render(
             <ThemeProvider theme={generalTheme}>
@@ -73,7 +73,7 @@ describe('HeaderComponent', () => {
         }
     });
 
-    it('should render the button correctly', () => {
+    test('should render the button correctly', () => {
         // arrange
         const button = <button>Test Button</button>;
 

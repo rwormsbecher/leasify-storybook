@@ -45,7 +45,7 @@ describe('NavbarComponent', () => {
         expect(links).toHaveLength(mockLinks.length);
     });
 
-    it('should render the correct text for each link', () => {
+    test('should render the correct text for each link', () => {
         // arrange
         mockLinks.forEach(link => {
             const linkObj = screen.getByRole('link', {
@@ -57,7 +57,7 @@ describe('NavbarComponent', () => {
         });
     });
 
-    it('should render the correct icon for each link', () => {
+    test('should render the correct icon for each link', () => {
         // arrange
         mockLinks.forEach(link => {
             const iconElement = screen.getByTestId(`icon-${link.to}`);
@@ -67,7 +67,7 @@ describe('NavbarComponent', () => {
         });
     });
 
-    it('should render the correct background color for active links', () => {
+    test('should render the correct background color for active links', () => {
         // arrange
         const activeLink = screen.getByRole('link', {
             name: mockLinks[0].text,

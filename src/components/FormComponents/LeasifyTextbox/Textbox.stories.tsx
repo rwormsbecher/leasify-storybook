@@ -2,7 +2,7 @@ import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 import { generalTheme } from '../../../themes/generalTheme';
 import { ThemeProvider } from 'styled-components';
-import { LeasifyTextbox } from './Textbox';
+import { LeasifyTextbox, LeasifyTextboxTypes } from './Textbox';
 
 const meta: Meta<typeof LeasifyTextbox> = {
     title: 'leasify forms/textbox',
@@ -23,4 +23,14 @@ const meta: Meta<typeof LeasifyTextbox> = {
 export default meta;
 type Story = StoryObj<typeof LeasifyTextbox>;
 
-export const Default: Story = {};
+export const Default: Story = {
+    args: {
+        type: LeasifyTextboxTypes.Text,
+    },
+};
+
+export const Password: Story = {
+    args: {
+        type: LeasifyTextboxTypes.Password,
+    },
+};

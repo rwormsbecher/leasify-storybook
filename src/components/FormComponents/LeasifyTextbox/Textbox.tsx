@@ -1,6 +1,11 @@
 import React, { HTMLAttributes, ReactElement } from 'react';
 import styled from 'styled-components';
 
+export enum LeasifyTextboxTypes {
+    Text = 'text',
+    Password = 'password',
+}
+
 const Textbox = styled.input`
     display: block;
     width: 100%;
@@ -17,7 +22,7 @@ const Textbox = styled.input`
     appearance: none;
     border-radius: 0;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 
     &:focus-visible {
         outline: -webkit-focus-ring-color 1px;
@@ -42,8 +47,13 @@ const Textbox = styled.input`
     }
 `;
 
-export const LeasifyTextbox: React.FC<HTMLAttributes<HTMLInputElement>> = ({
+export interface ILeasifyTextbox extends HTMLAttributes<HTMLInputElement> {
+    type?: LeasifyTextboxTypes;
+}
+
+export const LeasifyTextbox: React.FC<ILeasifyTextbox> = ({
+    type = LeasifyTextboxTypes.Text,
     ...props
 }): ReactElement => {
-    return <Textbox {...props}></Textbox>;
+    return <Textbox type={type} {...props}></Textbox>;
 };
