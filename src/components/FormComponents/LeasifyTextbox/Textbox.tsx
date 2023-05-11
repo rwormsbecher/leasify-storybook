@@ -1,7 +1,7 @@
 import React, { HTMLAttributes, ReactElement } from 'react';
 import styled from 'styled-components';
 
-export enum LeasifyTextboxTypes {
+export enum LeasifyTextboxTypesEnum {
     Text = 'text',
     Password = 'password',
 }
@@ -48,11 +48,11 @@ const Textbox = styled.input`
 `;
 
 export interface ILeasifyTextbox extends HTMLAttributes<HTMLInputElement> {
-    type?: LeasifyTextboxTypes;
+    type?: LeasifyTextboxTypesEnum;
 }
 
 export const LeasifyTextbox: React.FC<ILeasifyTextbox> = ({
-    type = LeasifyTextboxTypes.Text,
+    type = LeasifyTextboxTypesEnum.Text,
     ...props
 }): ReactElement => {
     return <Textbox type={type} {...props}></Textbox>;

@@ -26,7 +26,11 @@ export {
 } from './components/FormComponents/Label/LeasifyLabel';
 
 // Leasify Textbox
-export { LeasifyTextbox } from './components/FormComponents/LeasifyTextbox/Textbox';
+export {
+    LeasifyTextbox,
+    ILeasifyTextbox,
+    LeasifyTextboxTypesEnum,
+} from './components/FormComponents/LeasifyTextbox/Textbox';
 
 // Themes
 export { generalTheme } from './themes/generalTheme';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import { LeasifyTextbox, LeasifyTextboxTypes } from './Textbox';
+import { LeasifyTextbox, LeasifyTextboxTypesEnum } from './Textbox';
 import '@testing-library/jest-dom';
 
 describe('LeasifyTextbox', () => {
@@ -36,7 +36,7 @@ describe('LeasifyTextbox', () => {
         const { getByPlaceholderText } = render(
             <LeasifyTextbox
                 placeholder="Enter your name"
-                type={LeasifyTextboxTypes.Password}
+                type={LeasifyTextboxTypesEnum.Password}
             />
         );
 
