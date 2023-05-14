@@ -51,9 +51,9 @@ export interface ILeasifyTextbox extends HTMLAttributes<HTMLInputElement> {
     type?: LeasifyTextboxTypesEnum;
 }
 
-export const LeasifyTextbox: React.FC<ILeasifyTextbox> = ({
-    type = LeasifyTextboxTypesEnum.Text,
-    ...props
-}): ReactElement => {
-    return <Textbox type={type} {...props}></Textbox>;
+export const LeasifyTextbox: React.FC<ILeasifyTextbox> = (
+    { type = LeasifyTextboxTypesEnum.Text, ...props },
+    ref
+): ReactElement => {
+    return <Textbox type={type} {...props} ref={ref}></Textbox>;
 };
