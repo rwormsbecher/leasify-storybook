@@ -1,4 +1,9 @@
-import React, { HTMLAttributes, ReactElement } from 'react';
+import React, {
+    forwardRef,
+    ForwardRefRenderFunction,
+    HTMLAttributes,
+    ReactElement,
+} from 'react';
 import styled from 'styled-components';
 
 export enum LeasifyTextboxTypesEnum {
@@ -51,9 +56,11 @@ export interface ILeasifyTextbox extends HTMLAttributes<HTMLInputElement> {
     type?: LeasifyTextboxTypesEnum;
 }
 
-export const LeasifyTextbox: React.FC<ILeasifyTextbox> = (
-    { type = LeasifyTextboxTypesEnum.Text, ...props },
-    ref
-): ReactElement => {
+const LeasifyTextboxComponent: ForwardRefRenderFunction<
+    HTMLInputElement,
+    ILeasifyTextbox
+> = ({ type = LeasifyTextboxTypesEnum.Text, ...props }, ref): ReactElement => {
     return <Textbox type={type} {...props} ref={ref}></Textbox>;
 };
+
+export const LeasifyTextbox = forwardRef(LeasifyTextboxComponent);
