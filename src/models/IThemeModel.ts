@@ -5,6 +5,8 @@ export interface IThemeModel {
 
     primaryMuted400: string;
 
+    red500: string;
+
     secondaryColor500: string;
     secondaryColor700: string;
 

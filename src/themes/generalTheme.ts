@@ -8,6 +8,8 @@ export const generalTheme: IThemeModel = {
 
     primaryMuted400: '#3C5E5E',
 
+    red500: '#D21B02',
+
     secondaryColor500: '#FFD200',
     secondaryColor700: '#E6B400',
 
