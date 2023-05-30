@@ -40,6 +40,11 @@ const LeasifyButtonUI = styled.button<IButtonProps>`
         cursor: pointer;
     }
 
+    &:active,
+    &:focus {
+        outline: 1px solid ${themeProps => themeProps.theme.secondaryTextcolor};
+    }
+
     @media ${screenSize.tablet} {
         width: initial;
     }
