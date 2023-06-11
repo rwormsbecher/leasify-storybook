@@ -1,7 +1,6 @@
 import React, { ButtonHTMLAttributes } from 'react';
 import styled, { css } from 'styled-components';
 import { screenSize } from '../../themes/global';
-import { darken } from 'polished';
 
 export enum LeasifyButtonTypesEnum {
     Primary = 'Primary',
@@ -40,8 +39,7 @@ const LeasifyButtonUI = styled.button<IButtonProps>`
 
     &:hover {
         cursor: pointer;
-        background: ${themeProps =>
-            darken(0.02, themeProps.theme.primaryColor500)};
+        background: ${themeProps => themeProps.theme.primaryColor500};
         outline: 1px solid ${themeProps => themeProps.theme.secondaryTextcolor};
     }
 
@@ -68,8 +66,7 @@ const LeasifyButtonUI = styled.button<IButtonProps>`
             color: ${themeProps => themeProps.theme.secondaryTextcolor};
 
             &:hover {
-                background: ${themeProps =>
-                    darken(0.1, themeProps.theme.secondaryColor500)};
+                background: ${themeProps => themeProps.theme.secondaryColor500};
             }
         `}
 
@@ -80,8 +77,7 @@ const LeasifyButtonUI = styled.button<IButtonProps>`
             color: ${themeProps => themeProps.theme.primaryColor500};
 
             &:hover {
-                background: ${themeProps =>
-                    darken(0.1, themeProps.theme.secondaryLight500)};
+                background: ${themeProps => themeProps.theme.secondaryLight500};
             }
         `}
 
