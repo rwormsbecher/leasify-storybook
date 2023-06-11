@@ -6,6 +6,13 @@ export {
     LeasifyButtonHorizontalPositionEnum,
 } from './components/Button/Button';
 
+// Leasify HTML/H1/2/3 elements
+export {
+    LeasifyHeader1,
+    LeasifyHeader2,
+    LeasifyHeader3,
+} from './components/HtmlHeader/HtmlHeader';
+
 // Leasify Content card
 export { LeasifyContentCard } from './components/ContentCard/ContentCard';
 
