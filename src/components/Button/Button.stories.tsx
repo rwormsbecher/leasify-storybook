@@ -39,3 +39,9 @@ export const Secondary: Story = {
         buttonType: LeasifyButtonTypesEnum.Secondary,
     },
 };
+
+export const SecondaryLight: Story = {
+    args: {
+        buttonType: LeasifyButtonTypesEnum.PrimaryLight,
+    },
+};

@@ -1,10 +1,12 @@
 import React, { ButtonHTMLAttributes } from 'react';
 import styled, { css } from 'styled-components';
 import { screenSize } from '../../themes/global';
+import { darken } from 'polished';
 
 export enum LeasifyButtonTypesEnum {
     Primary = 'Primary',
     Secondary = 'Secondary',
+    PrimaryLight = 'PrimaryLight',
 }
 
 export enum LeasifyButtonSizesEnum {
@@ -38,6 +40,9 @@ const LeasifyButtonUI = styled.button<IButtonProps>`
 
     &:hover {
         cursor: pointer;
+        background: ${themeProps =>
+            darken(0.02, themeProps.theme.primaryColor500)};
+        outline: 1px solid ${themeProps => themeProps.theme.secondaryTextcolor};
     }
 
     &:active,
@@ -61,6 +66,23 @@ const LeasifyButtonUI = styled.button<IButtonProps>`
         css`
             background: ${themeProps => themeProps.theme.secondaryColor500};
             color: ${themeProps => themeProps.theme.secondaryTextcolor};
+
+            &:hover {
+                background: ${themeProps =>
+                    darken(0.1, themeProps.theme.secondaryColor500)};
+            }
+        `}
+
+    ${({ buttonType }: any) =>
+        buttonType === LeasifyButtonTypesEnum.PrimaryLight &&
+        css`
+            background: ${themeProps => themeProps.theme.secondaryLight500};
+            color: ${themeProps => themeProps.theme.primaryColor500};
+
+            &:hover {
+                background: ${themeProps =>
+                    darken(0.1, themeProps.theme.secondaryLight500)};
+            }
         `}
 
 

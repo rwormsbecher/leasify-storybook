@@ -13,6 +13,8 @@ export const generalTheme: IThemeModel = {
     secondaryColor500: '#FFD200',
     secondaryColor700: '#E6B400',
 
+    secondaryLight500: '#EDF7F7',
+
     secondaryTextcolor: '#222222',
 
     textColor300: '#666666',

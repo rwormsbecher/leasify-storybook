@@ -10,6 +10,8 @@ export interface IThemeModel {
     secondaryColor500: string;
     secondaryColor700: string;
 
+    secondaryLight500: string;
+
     secondaryTextcolor: string;
 
     textColor300: string;

@@ -26,6 +26,22 @@ describe('Leasify button', () => {
         );
     });
 
+    test('renders a primary light button in light green', () => {
+        //arrange
+        render(
+            <ThemeProvider theme={generalTheme}>
+                <LeasifyButton buttonType={LeasifyButtonTypesEnum.PrimaryLight}>
+                    test
+                </LeasifyButton>
+            </ThemeProvider>
+        );
+
+        //assert
+        expect(screen.getByRole('button')).toHaveStyle(
+            'background: rgb(237, 247, 247)'
+        );
+    });
+
     test('renders a secondary button in yellow', () => {
         //arrange
         render(
