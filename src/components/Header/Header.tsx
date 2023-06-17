@@ -61,10 +61,10 @@ const Header = styled.div`
 
 const BreadCrumbContainer = styled.div`
     display: flex;
-    width: 100%;
     color: white;
     font-size: 16px;
     margin: 38px 16px 16px 8px;
+    width: calc(100% - 24px);
     z-index: 12;
 
     ul {
@@ -96,6 +96,7 @@ const BreadCrumbContainer = styled.div`
 
     @media ${screenSize.desktop} {
         margin: 38px 174px 16px 174px;
+        width: calc(100% - 348px);
     }
 `;
 
