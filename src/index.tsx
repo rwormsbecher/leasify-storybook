@@ -1,4 +1,8 @@
 import {
+    DisplayNumber,
+    DisplayNumberProps,
+} from './components/DisplayNumber/DisplayNumber';
+import {
     LeaseContractOverviewDiagram,
     LeaseContractOverviewDiagramProps,
 } from './components/LeaseContractOverviewDiagram/LeasifyContractSummaryChart';
@@ -18,10 +22,16 @@ export {
     LeasifyHeader3,
 } from './components/HtmlHeader/HtmlHeader';
 
-// Leasify
+// Leasify chart
 export {
     LeaseContractOverviewDiagram as LeasifyContractSummaryChart,
     LeaseContractOverviewDiagramProps as LeasifyContractSummaryChartProps,
+};
+
+// LeasifyDisplayNumber
+export {
+    DisplayNumber as LeasifyDisplayNumber,
+    DisplayNumberProps as LeasifyDisplayNumberProps,
 };
 
 // Leasify Content card
