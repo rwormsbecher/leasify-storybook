@@ -3,6 +3,7 @@ export interface IThemeModel {
     primaryColor300: string;
     primaryColor500: string;
 
+    primaryMuted300: string;
     primaryMuted400: string;
 
     red500: string;
@@ -13,6 +14,8 @@ export interface IThemeModel {
     secondaryLight500: string;
 
     secondaryTextcolor: string;
+
+    neutrals55: string;
 
     textColor300: string;
     textColor500: string;

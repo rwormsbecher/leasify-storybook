@@ -6,6 +6,7 @@ export const generalTheme: IThemeModel = {
     primaryColor300: '#C0D1D0',
     primaryColor500: '#00716B',
 
+    primaryMuted300: '#4F706F',
     primaryMuted400: '#3C5E5E',
 
     red500: '#D21B02',
@@ -16,6 +17,8 @@ export const generalTheme: IThemeModel = {
     secondaryLight500: '#EDF7F7',
 
     secondaryTextcolor: '#222222',
+
+    neutrals55: '#F0F0F0',
 
     textColor300: '#666666',
     textColor500: '#4D4D4D',

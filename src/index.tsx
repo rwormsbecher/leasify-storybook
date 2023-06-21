@@ -1,3 +1,8 @@
+import {
+    LeaseContractOverviewDiagram,
+    LeaseContractOverviewDiagramProps,
+} from './components/LeaseContractOverviewDiagram/LeasifyContractSummaryChart';
+
 // Leasify Button
 export {
     LeasifyButton,
@@ -12,6 +17,12 @@ export {
     LeasifyHeader2,
     LeasifyHeader3,
 } from './components/HtmlHeader/HtmlHeader';
+
+// Leasify
+export {
+    LeaseContractOverviewDiagram as LeasifyContractSummaryChart,
+    LeaseContractOverviewDiagramProps as LeasifyContractSummaryChartProps,
+};
 
 // Leasify Content card
 export { LeasifyContentCard } from './components/ContentCard/ContentCard';
