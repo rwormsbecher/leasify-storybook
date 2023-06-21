@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { LeasifyContentCard } from '../ContentCard/ContentCard';
 
 export interface LeaseContractOverviewDiagramProps {
     contractTotal: number;
