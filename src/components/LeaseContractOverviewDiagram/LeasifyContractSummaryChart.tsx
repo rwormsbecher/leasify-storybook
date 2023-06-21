@@ -53,35 +53,33 @@ export const LeaseContractOverviewDiagram: React.FC<LeaseContractOverviewDiagram
     const availablePercentage = 100 - usedPercentage - pendingPercentage;
 
     return (
-        <LeasifyContentCard aria-label="Lease Contract Overview Diagram">
-            <DiagramContainer
-                role="progressbar"
-                aria-valuemin={0}
-                aria-valuemax={100}
-            >
-                <UsedPercentageBar
-                    width={usedPercentage}
-                    title={contractUsedTotal + ' used.'}
-                    aria-valuenow={usedPercentage}
-                    data-testid="used-percentage-bar"
-                />
-                <PendingPercentageBar
-                    width={pendingPercentage}
-                    title={contractPendingTotal + ' pending.'}
-                    aria-valuenow={pendingPercentage}
-                    data-testid="pending-percentage-bar"
-                />
-                <AvailablePercentageBar
-                    width={availablePercentage}
-                    title={
-                        contractTotal -
-                        (contractUsedTotal + contractPendingTotal) +
-                        ' available.'
-                    }
-                    aria-valuenow={availablePercentage}
-                    data-testid="available-percentage-bar"
-                />
-            </DiagramContainer>
-        </LeasifyContentCard>
+        <DiagramContainer
+            role="progressbar"
+            aria-valuemin={0}
+            aria-valuemax={100}
+        >
+            <UsedPercentageBar
+                width={usedPercentage}
+                title={contractUsedTotal + ' used.'}
+                aria-valuenow={usedPercentage}
+                data-testid="used-percentage-bar"
+            />
+            <PendingPercentageBar
+                width={pendingPercentage}
+                title={contractPendingTotal + ' pending.'}
+                aria-valuenow={pendingPercentage}
+                data-testid="pending-percentage-bar"
+            />
+            <AvailablePercentageBar
+                width={availablePercentage}
+                title={
+                    contractTotal -
+                    (contractUsedTotal + contractPendingTotal) +
+                    ' available.'
+                }
+                aria-valuenow={availablePercentage}
+                data-testid="available-percentage-bar"
+            />
+        </DiagramContainer>
     );
 };
